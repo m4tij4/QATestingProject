@@ -1,3 +1,4 @@
+
 var builder = DistributedApplication.CreateBuilder(args);
 
 var postgresDb = builder.AddPostgres("postgresDb").WithPgAdmin();

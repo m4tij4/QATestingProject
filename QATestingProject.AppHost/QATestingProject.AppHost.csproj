@@ -11,6 +11,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\QATestingProject.ApiService\QATestingProject.ApiService.csproj" />
+    <ProjectReference Include="..\QATestingProject.ServiceDefaults\QATestingProject.ServiceDefaults.csproj" />
     <ProjectReference Include="..\QATestingProject.Web\QATestingProject.Web.csproj" />
   </ItemGroup>
 

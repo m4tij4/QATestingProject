@@ -1,3 +1,4 @@
+using QATestingProject.ServiceDefaults;
 using QATestingProject.Web;
 using QATestingProject.Web.Components;
 
@@ -11,14 +12,14 @@ builder.AddServiceDefaults();
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
 
-builder.AddRedisOutputCache("redisCache");
+builder.AddRedisOutputCache(GlobalStrings.RedisCache);
 //builder.Services.AddOutputCache();
 
 builder.Services.AddHttpClient<WeatherApiClient>(client =>
     {
         // This URL uses "https+http://" to indicate HTTPS is preferred over HTTP.
         // Learn more about service discovery scheme resolution at https://aka.ms/dotnet/sdschemes.
-        client.BaseAddress = new("https+http://apiservice");
+        client.BaseAddress = new($"https+http://{GlobalStrings.ApiService}");
     });
 
 var app = builder.Build();
