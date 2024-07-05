@@ -8,9 +8,10 @@ namespace QATestingProject.ServiceDefaults
 {
     public static class GlobalStrings
     {
-        public static readonly string PostgresDb = "postgresDb";
-        public static readonly string RedisCache = "redisCache";
-        public static readonly string ApiService = "apiservice";
-        public static readonly string WebFrontend = "webfrontend";
+        public static readonly string seq = "seq";
+        public static readonly string postgresDb = "postgresDb";
+        public static readonly string redisCache = "redisCache";
+        public static readonly string apiService = "apiservice";
+        public static readonly string webFrontend = "webfrontend";
     }
 }

@@ -1,14 +1,20 @@
-
+using QATestingProject.ServiceDefaults;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add service defaults & Aspire components.
 builder.AddServiceDefaults();
 
+builder.AddSeqEndpoint(GlobalStrings.seq, static settings =>
+{
+    settings.DisableHealthChecks = true;
+});
+
 // Add services to the container.
 builder.Services.AddProblemDetails();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
 var app = builder.Build();
 
 

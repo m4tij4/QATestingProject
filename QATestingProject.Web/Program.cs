@@ -12,14 +12,14 @@ builder.AddServiceDefaults();
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
 
-builder.AddRedisOutputCache(GlobalStrings.RedisCache);
+builder.AddRedisOutputCache(GlobalStrings.redisCache);
 //builder.Services.AddOutputCache();
 
 builder.Services.AddHttpClient<WeatherApiClient>(client =>
     {
         // This URL uses "https+http://" to indicate HTTPS is preferred over HTTP.
         // Learn more about service discovery scheme resolution at https://aka.ms/dotnet/sdschemes.
-        client.BaseAddress = new($"https+http://{GlobalStrings.ApiService}");
+        client.BaseAddress = new($"https+http://{GlobalStrings.apiService}");
     });
 
 var app = builder.Build();
