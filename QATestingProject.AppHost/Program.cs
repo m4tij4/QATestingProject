@@ -1,9 +1,9 @@
 
 var builder = DistributedApplication.CreateBuilder(args);
 
-var postgresDb = builder.AddPostgres("postgresDb").WithPgAdmin();
+var postgresDb = builder.AddPostgres("postgres-db").WithPgAdmin();
 
-var redisCache = builder.AddRedis("redisCache");
+var redisCache = builder.AddRedis("redis-cache");
 
 var seq = builder.AddSeq("seq");
 
