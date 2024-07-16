@@ -5,8 +5,7 @@ var postgresDb = builder.AddPostgres("postgresDb").WithPgAdmin();
 
 var redisCache = builder.AddRedis("redisCache");
 
-var seq = builder.AddSeq("seq")
-                .ExcludeFromManifest();
+var seq = builder.AddSeq("seq");
 
 
 var apiService = builder.AddProject<Projects.QATestingProject_ApiService>("apiservice")
